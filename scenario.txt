@@ -1,0 +1,28 @@
+User creates an account
+-Select create account
+-enter personal details
+-enter sign in information
+- - Enter invalid password
+- Enter valid password
+Select create account
+
+User signs into account
+- Select sign in
+- - Enter invalid email
+- - Enter invalid password
+- Enter valid password
+- - Select forgot password
+- Sign in
+
+User selects the latest item in What's new
+- User selects What's new button
+- User scrolls downwards to Luma's latest
+- User adds first item to cart
+
+User goes through a purchase journey
+- Verify free delivery
+- Verify different variations of purchase
+
+User can add items to wishlist
+
+User can compare products
