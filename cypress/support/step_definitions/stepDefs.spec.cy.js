@@ -8,12 +8,12 @@ Given("User is on the home page",()=>{
     cy.visit(Cypress.env("baseUrl"));
 })
 
-And("the user selects the create an account button",()=>{
-    homePage.selectHeaderCreateAccountButton();
+Then("the user selects the create an account button",()=>{
+    homePage.selectHeaderCreateAccountButton(); //done
 })
 
-And("the user selects the header sign in button",()=>{
-     homePage.selectHeaderSignInButton();
+Then("the user selects the header sign in button",()=>{
+     homePage.selectHeaderSignInButton(); //done
 
 })
 
@@ -38,7 +38,7 @@ Then("we select the create an account button",()=>{
 
 })
 
-And("the user selects the sign in button",()=>{
+Then("the user selects the sign in button",()=>{
 
 })
 
