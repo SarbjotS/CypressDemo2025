@@ -24,5 +24,8 @@ export default defineConfig({
 
       return config;
     }
+  },
+  env:{
+    baseUrl: "https://magento.softwaretestingboard.com/"
   }
 });
