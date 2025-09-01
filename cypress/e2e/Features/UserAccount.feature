@@ -4,6 +4,7 @@ Scenario: User can create an account
 Given User is on the home page
 Then the user selects the create an account button
 Then the user inputs the create account information
+Then the user inputs their email and password
 Then we select the create an account button
 Then we verify the account has been created
 

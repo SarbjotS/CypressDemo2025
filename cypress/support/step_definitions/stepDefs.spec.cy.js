@@ -2,6 +2,10 @@ import { Given,Then,After } from "@badeball/cypress-cucumber-preprocessor";
 import { homePage } from "../../e2e/SelectorHelper/HomePage";
 import { accountPage } from "../../e2e/SelectorHelper/accountPage";
 
+//these are just temporary passwords created for the purporse of creating an account
+//passwords for signing in will be more securely handled.
+var email;
+var password;
 
 
 Given("User is on the home page",()=>{
@@ -23,9 +27,11 @@ Then("the user inputs the create account information",()=>{
 })
 
 Then("the user inputs their email and password",()=>{
-    accountPage.inputEmail();
-    accountPage.inputPassword();
-    accountPage.confirmPassword();
+    email = accountPage.createEmail();
+    //accountPage.createPassword(password);
+    accountPage.inputEmail(email);
+    //accountPage.inputPassword(password);
+    //accountPage.confirmPassword(password);
 })
 
 Then("the user inputs their invalid email or password",()=>{
