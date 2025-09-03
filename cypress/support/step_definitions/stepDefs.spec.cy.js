@@ -4,8 +4,8 @@ import { accountPage } from "../../e2e/SelectorHelper/accountPage";
 
 //these are just temporary passwords created for the purporse of creating an account
 //passwords for signing in will be more securely handled.
-var email;
-var password;
+var email
+var password
 
 
 Given("User is on the home page",()=>{
@@ -27,11 +27,14 @@ Then("the user inputs the create account information",()=>{
 })
 
 Then("the user inputs their email and password",()=>{
-    email = accountPage.createEmail();
-    //accountPage.createPassword(password);
+    if (email == null || password == null){
+        email = accountPage.createEmail();
+        password = accountPage.createPassword();
+    }
     accountPage.inputEmail(email);
-    //accountPage.inputPassword(password);
-    //accountPage.confirmPassword(password);
+    accountPage.inputPassword(password);
+    accountPage.confirmPassword(password);
+    
 })
 
 Then("the user inputs their invalid email or password",()=>{
@@ -45,6 +48,7 @@ Then("we select the create an account button",()=>{
 })
 
 Then("the user selects the sign in button",()=>{
+    accountPage.selectSignInButton();
 
 })
 
@@ -53,7 +57,7 @@ Then ("we verify the account has been created",()=>{
 })
 
 Then("we confirm the user has signed in",()=>{
-
+    accountPage.verifySignIn();
 })
 
 Then("we confirm the user has not been signed in and shown an error",()=>{
